@@ -1,0 +1,1193 @@
+<div onclick="hide_popup()" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: black; z-index: 444; opacity: 0.7; display: none;" id="DIV_back_black"> </div>
+
+<style>
+  .animated { 
+      animation-duration: 1s; 
+      animation-fill-mode: both; 
+      animation-timing-function: linear; 
+      animation-iteration-count:infinite; 
+  } 
+
+  @keyframes bouncex { 
+      0%, 20%, 50%, 80%, 100% {transform: translateY(10);} 
+      40% {transform: translateY(-20px);} 
+      60% {transform: translateY(-15px);} 
+  } 
+
+  .bouncex { 
+      animation-name: bouncex; 
+  }
+</style>
+<div style="text-align: center; padding-top: 0%; background-color: white; width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 999;" id="preloader_on_body"> 
+    <div class="animated bouncex" style="background-color: transparent; border:none; width: 100%; height: 100vh; background-repeat: no-repeat; background-position: center; background-size: 18em; background-image: url(https://nontonhub.com/watch/img/splash.png);">
+        
+    </div>
+</div>
+
+
+<table id="DIV_toast" onclick="closetoast()" style="text-align: center; display: none; transition-duration: 2s; position: fixed; bottom: -2em; left: 0%; background-color: black; color: white; opacity: 0.8; border-radius: 0; width: 100%; height: auto; padding: 1%; z-index: 999; word-break: break-word;">
+    <tr>
+        <td style="text-align: center; vertical-align: middle; width: 100%; height: auto;"> </td>
+    </tr>
+</table>
+
+
+
+<style type="text/css">
+html{
+	font-family: sans-serif;
+}
+
+.hrstyle {
+      border: 0; 
+      height: 1px; 
+      background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+      background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+      background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+      background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-container{
+	display: grid; grid-template-columns: 33.3% 33.3% 33.3%;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container{
+	border: none; background-color: transparent;
+}
+.grid-container > div{
+	border: none; background-color: transparent;
+}
+.grid-item{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 1em
+}
+
+.grid-container2{
+	display: grid; grid-template-columns: 20% 20% 20% 20% 20% ;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container2{
+	border: none; background-color: transparent;
+}
+.grid-container2 > div{
+	border: none; background-color: transparent;
+}
+.grid-item2{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 1em
+}
+.grid-item2:hover{
+	border:1px solid #ffb200;
+	cursor: pointer
+}
+
+.grid-container3{
+	display: grid; grid-template-columns: 14% 14% 14% 14% 14% 14% 14% ;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container3{
+	border: none; background-color: transparent;
+}
+.grid-container3 > div{
+	border: none; background-color: transparent;
+}
+.grid-item3{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 1em
+}
+.grid-item3:hover{
+	border:1px solid #ffb200;
+	cursor: pointer
+}
+
+.grid-container4{
+	display: grid; grid-template-columns: 50% 50% ;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container4{
+	border: none; background-color: transparent;
+}
+.grid-container4 > div{
+	border: none; background-color: transparent;
+}
+.grid-item4{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 2%
+}
+.grid-item4:hover{
+	border:1px solid #ffb200;
+	cursor: pointer
+}
+
+
+
+.grid-container5{
+	display: grid; grid-template-columns: 25% 25% 25% 25% ;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container5{
+	border: none; background-color: transparent;
+}
+.grid-container5 > div{
+	border: none; background-color: transparent;
+}
+.grid-item5{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 2%
+}
+.grid-item5:hover{
+	border:1px solid #ffb200;
+	cursor: pointer
+}
+
+
+
+.grid-container6{
+	display: grid; grid-template-columns: 33.3% 33.3% 33.3% ;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container6{
+	border: none; background-color: transparent;
+}
+.grid-container6 > div{
+	border: none; background-color: transparent;
+}
+.grid-item6{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 1em
+}
+.grid-item6:hover{
+	border:1px solid #ffb200;
+	cursor: pointer
+}
+
+
+.grid-container7{
+	display: grid; grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ;
+}
+*{
+	box-sizing: border-box;
+}
+.grid-container7{
+	border: none; background-color: transparent;
+}
+.grid-container7 > div{
+	border: none; background-color: transparent;
+}
+.grid-item7{
+	border:1px solid #cc8e00;
+	text-align: center; margin: 1em
+}
+.grid-item7:hover{
+	border:1px solid #ffb200;
+	cursor: pointer
+}
+
+
+
+
+
+
+
+
+
+
+.btn_1 {
+cursor: pointer;
+background-color:#ffb200;
+border-radius:10px;
+border:1px solid #ffffff;
+display:inline-block;
+color:#ffffff;
+padding:2%;
+text-decoration:none;
+outline: none;
+width: auto;
+}
+.btn_1:hover {
+cursor: pointer;
+	background-color:#cc8e00;
+}
+.btn_1:active {
+cursor: pointer;
+	position:relative;
+	top:1px;
+}
+
+.btn_2 {
+cursor: pointer;
+background-color:#ffb200;
+border-radius:10px;
+border:1px solid #ffffff;
+display:inline-block;
+color:#ffffff;
+padding:2%;
+text-decoration:none;
+outline: none;
+width: auto;
+}
+.btn_2:hover {
+cursor: pointer;
+	background-color:#cc8e00;
+}
+.btn_2:active {
+cursor: pointer;
+	position:relative;
+	top:1px;
+}
+
+.top_popular_movies_title{
+font-size: 150%; color: white
+}
+.top_popular_movies_title:hover{
+font-size: 150%; color: #ffb200
+}
+
+
+
+
+@media  screen and (min-width: 1200px){
+	.sidebar_trailers{
+		display: initial;
+		width: 15%; text-align: center; vertical-align: top;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media  screen and (max-width: 1200px){
+	.sidebar_trailers{
+		display: none;
+		width: 15%; text-align: center; vertical-align: top;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+.circular-menu {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+.circular-menu .floating-btn {
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background-color: hsl(4, 98%, 60%);
+  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  line-height: 3.9;
+  cursor: pointer;
+  outline: 0;
+}
+
+.circular-menu.active .floating-btn {
+  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
+}
+
+.circular-menu .floating-btn:active {
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
+}
+
+.circular-menu .floating-btn i {
+  font-size: 1.3em;
+  transition: transform .2s;  
+}
+
+.circular-menu.active .floating-btn i {
+  transform: rotate(-45deg);
+}
+
+.circular-menu:after {
+  display: block;
+  content: ' ';
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background-color: hsl(4, 98%, 60%);
+  transition: all .3s ease;
+}
+
+.circular-menu.active:after {
+  transform: scale3d(5.5, 5.5, 1);
+  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+}
+
+.circular-menu .items-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.circular-menu .menu-item {
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  z-index: -1;
+  display: block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3;
+  background-color: hsla(0,0%,0%,.1);
+  transition: transform .3s ease, background .2s ease;
+}
+
+.circular-menu .menu-item:hover {
+  background-color: hsla(0,0%,0%,.3);
+}
+
+.circular-menu.active .menu-item {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.circular-menu.active .menu-item:nth-child(1) {
+  transform: translate3d(1em,-7em,0);
+}
+
+.circular-menu.active .menu-item:nth-child(2) {
+  transform: translate3d(-3.5em,-6.3em,0);
+}
+
+.circular-menu.active .menu-item:nth-child(3) {
+  transform: translate3d(-6.5em,-3.2em,0);
+}
+
+.circular-menu.active .menu-item:nth-child(4) {
+  transform: translate3d(-7em,1em,0);
+}
+
+
+.circular-menu.circular-menu-left {
+  right: auto; 
+  left: 1em;
+}
+
+.circular-menu.circular-menu-left .floating-btn {
+  background-color: hsl(217, 89%, 61%);
+}
+
+.circular-menu.circular-menu-left:after {
+  background-color: hsl(217, 89%, 61%);
+}
+
+.circular-menu.circular-menu-left.active .floating-btn i {
+  transform: rotate(90deg);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(1) {
+  transform: translate3d(-1em,-7em,0);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(2) {
+  transform: translate3d(3.5em,-6.3em,0);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(3) {
+  transform: translate3d(6.5em,-3.2em,0);
+}
+
+.circular-menu.circular-menu-left.active .menu-item:nth-child(4) {
+  transform: translate3d(7em,1em,0);
+}
+
+</style>
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <title>NontonHubXXI</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <meta name="author" content="nontonhub.org">
+    <title>NontonHubXXI</title>
+
+
+	<script src="https://nontonhub.com/watch/js/jquery-2.1.4.min.js"></script>
+	<script src="https://nontonhub.com/webapp/js_watch.js"></script>
+
+</head>
+
+<body style="margin: 1em; padding: 0;">
+<div id="bodypage" style="margin: 0em; padding: 0; display:none;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="trailers_shower" style="width: 100%; height: 100vh; background-color: black; position: fixed; top: 0; left: 0%; right: 0%; z-index: 888; display: none;">
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table style="width: 100%; height: 3em; -webkit-box-shadow: 0px 9px 9px -10px rgba(0,0,0,0.75); -moz-box-shadow: 0px 9px 9px -10px rgba(0,0,0,0.75); box-shadow: 0px 9px 9px -10px rgba(0,0,0,0.75); position: fixed; top: 0; left: 0; background-color: black; z-index: 555">
+		<tr>
+			<td onclick='go("https://nontonhub.com/watch");' style="width: 15%; text-align: left; vertical-align: middle; background-color: transparent; background-repeat: no-repeat; background-position: center; background-size: 70%; background-image: url(https://nontonhub.com/watch/img/LOGOtextBIG.png);">
+				
+
+			</td>
+			<td style="width: 65%; font-size: 250%; text-align: center; vertical-align: middle; background-color: black">
+
+				<input type="text" style="width: 80%; height: 3em; text-decoration: none; outline: none; border:1px solid #ccc; border-radius: 50px; padding-left: 4%; color:black; background-color: #ededed;" placeholder="Cari film ... " id="txtsearchsomething">
+
+			</td>
+			<td style="width: 20%; font-size: 90%; text-align: center; vertical-align: middle; color: grey; background-color: black">
+
+				<span>Nonton Film Sepuasnya Gratis Terpopuler Setiap Hari</span>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" id="DIV_search_result" style="display: none; width: 100%; text-align: left; vertical-align: middle;">
+
+				<table style="width: 100%;">
+					<tr>
+						<td style="width: 30%; text-align: center; vertical-align: top; color:white;">
+						
+							<br>							
+							<b style="font-size: 130%;">"Kata Kunci" Populer Ditonton</b>
+							<br>							
+							<div class="grid-container6" id="DIV_search_result_content_1" style=" font-size: 80%;">
+
+						        <div class="grid-item6" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item6" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item6" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item6" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item6" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item6" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+								
+							</div>
+
+						</td>
+						<td style="width: 60%; text-align: center; vertical-align: top; padding-left: 3%; color:white;">
+
+							<br>							
+							<b style="font-size: 130%;">Berkaitan Dengan "Kata Kunci"</b>
+							<br>							
+							<div class="grid-container7" id="DIV_search_result_content_2" style="width: 95%; max-width: 95%; font-size: 80%;">
+
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+						        <div class="grid-item7" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+						        
+						        </div>
+								
+							</div>
+
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table style="width: 100%; margin: 0; padding: 0;">
+		<tr>
+			<td class="sidebar_trailers">
+
+				
+
+
+				<h4>Trailer Populer Hari Ini</h4>
+				<div id="DIV_top_popular_trailers_lists" style="width: 100%;">
+
+		            <div style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:100%; height:13em; background-color:#ccc; border-radius:10px;">
+
+		            
+		            </div>
+		            <br>
+		            <br>
+		            <div style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:100%; height:13em; background-color:#ccc; border-radius:10px;">
+
+		            
+		            </div>
+		            <br>
+		            <br>
+		            <div style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:100%; height:13em; background-color:#ccc; border-radius:10px;">
+
+		            
+		            </div>
+		            <br>
+		            <br>
+		            <div style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:100%; height:13em; background-color:#ccc; border-radius:10px;">
+
+		            
+		            </div>
+		            <br>
+		            <br>
+
+				</div>
+
+
+
+
+			</td>
+			<td style="width: 85%; text-align: center; vertical-align: top; padding-left: 2em">
+							
+
+
+
+
+
+
+	            <table style="width: 100%; height: auto; background-color: black; padding: 0; margin: 0; border:none;">
+	              <tr>
+	                <td style=" background-color: black;width: 70%; text-align: left; vertical-align: top; color:white; padding-left: 1em; padding-bottom: 2em; padding-top: 2%; ">
+	                   		
+	                   		<!--<span style="height: auto; padding-left: 2%; padding-right: 2%; width: auto; border-radius: 7px;">Subtitle : <b style="color:#ffb200;">Indonesia</b></span>-->
+
+	                   		<!--<span style="height: auto; padding-left: 2%; padding-right: 2%; width: auto; border-radius: 7px;">Video Quality : <b style="color:#ffb200;">HD</b></span>-->
+	                   		<!--<br>-->
+	                   		<!--<br>-->
+	        				<video id="VIDEO_player" controls controlsList="nodownload" disablePictureInPicture preload="auto" src='' width="100%" height="auto" style="background-image:url(); background-size:100%; background-position:center; background-repeat:no-repeat; background-color:black; object-fit:scale-down; position:relative; z-index:2; text-decoration: none; outline: none;" poster="https://nontonhub.com/watch/img/playerLoading.gif">
+
+	        					<track id="track_subtitle" label="Indonesian" kind="subtitles" srclang="id" src="" default>
+
+	          				</video>
+
+  							<br>
+  							<br>
+	                   		<br>
+	                   		<br>
+  							<br>
+	          				<table style="width: 100%; height: auto; margin: 0; padding: 0;">
+	          					<tr>
+	          						<td style="width: 20%; text-align: center; vertical-align: middle; color:white;">
+      									
+      									<h1>NEXT</h1>
+							        	<b>
+							        		Film Serupa
+							        	</b>
+
+	          						</td>
+	          						<td style="width: 80%; text-align: center; vertical-align: middle; color:white;">
+	          							
+										<div class="grid-container5" id="DIV_next_movies_list">
+
+
+
+
+
+
+
+										</div>
+
+	          						</td>
+	          					</tr>
+	          				</table>
+
+	                </td>
+	                <td style=" background-color: black;width: 30%; text-align: left; vertical-align: top; padding:2%;">
+	               
+
+	                  	<i><h4 style="color:white; font-size: 140%;">&bull; Tentang Film Ini</h4></i>
+			            <table style="width: 100%; height: auto; background-color: black; padding: 0; margin: 0; border:none;">
+			              <tr>
+			                <td style="background-color: black; width: 40%; text-align: center; vertical-align: middle;">
+
+		                        <div id="movies_poster" style="background-image:url(); background-position:center; background-size:cover; background-repeat:no-repeat; border-radius: 7px; width:100%; height: 10em; background-color: transparent;">
+		                        
+
+		                        </div>
+
+			                </td>
+			                <td style="background-color: black;width: 60%; text-align: center; vertical-align: middle; padding:2%; word-break:break-word;">
+                                
+                              
+	              				<h4 id="LBL_mo_title" style=" color:white;">...</h4>
+				               
+			                </td>
+			            </table>
+
+	                  <hr class="hrstyle">
+					  <br>
+
+			            <table style="width: 100%; height: auto; background-color: black; padding: 0; margin: 0; border:none;">
+			              <tr>
+			                <td style="background-color: black; width: 100%; text-align: left; vertical-align: middle; color:grey; font-size: 70%;" id="LBL_mo_desc">
+                                
+
+			                </td>
+			            </table>
+
+	                  <hr class="hrstyle">
+
+			            <table style="width: 100%; height: auto; background-color: black; padding: 0; margin: 0; border:none;">
+			              <tr>
+			                <td style="background-color: black; width: 100%; text-align: left; vertical-align: middle; color:white; font-size: 70%;">
+
+	                            Kategori : <b style="color: grey" id="LBL_mo_category"></b>
+
+			                </td>
+			            </table>
+
+	                  <hr class="hrstyle">
+
+			            <table style="width: 100%; height: auto; background-color: black; padding: 0; margin: 0; border:none;">
+			              <tr>
+			                <td style="background-color: black; width: 100%; text-align: left; vertical-align: middle; color:white; font-size: 70%;">
+
+	                            Diunggah pada tanggal : <b style="color: grey" id="LBL_mo_updated"></b>
+
+			                </td>
+			            </table>
+
+	                  <hr class="hrstyle">
+
+	                  	<i><h4 style="color:white; font-size: 140%;">&bull; Komentar Pengguna Di Aplikasi NontonHubXXI</h4></i>
+			            <table style="width: 100%; height: auto; margin: 0; padding: 0;color:white; font-size: 90%;" id="TBL_list_comments">
+						
+			            </table>
+
+
+	                </td>
+	              </tr>
+	              <tr>
+	                <td id="DIV_peoples_last_visit" colspan="2" style="display: none; background-color: black; width: 100%; text-align: left; vertical-align: middle; color:white; padding-left: 1em; padding-bottom: 2em; background-repeat: no-repeat; background-position: right bottom; background-size: 39%; background-image: url(https://nontonhub.com/watch/img/girlsoncinema.jpg)">
+                   		
+                   		<br>
+                   		<br>
+						<div style="width: 70%; max-width: 70%; padding-left: 2em">
+								<h1>Orang-orang Sedang Ramai Menonton</h1>
+						</div>
+						<div class="grid-container2" style="width: 70%; max-width: 70%; " id="DIV_list_newest_visited">
+
+
+
+
+
+						</div>
+
+	                </td>
+	              </tr>
+	            </table>
+
+
+
+
+
+
+
+				<br>
+				<hr class="hrstyle">
+				<br>
+
+
+
+
+
+
+
+				<div style="margin: 2em;">
+					<table style="width: 100%; height: auto;">
+						<tr>
+							<td style="width: 20%; text-align: center; padding-top: 1%; vertical-align: top; ">
+								
+								<h1>Diskusi</h1>
+								<div style="border:none; width: 90%; height: 14em; background-repeat: no-repeat; background-position: center; background-size: 100%; background-image: url(https://nontonhub.com/watch/img/disscuss.png)">
+
+								</div>
+
+							</td>
+							<td style="width: 80%; text-align: center; padding: 1em; vertical-align: top;">
+
+								<h2>Orang-orang baru saja berdiskusi tentang film-film ini melalui aplikasi NontonHubXXI Official</h2>
+								<span style="font-size: 90%;">Hanya dengan menggunakan aplikasi NontonHubXXI dari Playstore, kamu juga dapat berdiskusi dengan mereka bersama-sama. Download sekarang di Playstore !</span>
+								<br>
+								<br>
+								<br>
+								<button onclick="window.open('https://play.google.com/store/apps/details?id=com.nontonhub.app');" style="cursor: pointer; border:none; width: 12em; height: 4em; background-repeat: no-repeat; background-position: center; background-size: 100%; background-image: url(https://nontonhub.com/watch/img/en_badge_web_generic.png); text-decoration: none; outline: none;">
+								</button>
+
+							</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					<div class="grid-container3" id="DIV_newest_people_disscussion_on_movies">
+
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+						
+					</div>
+				</div>
+				<br>
+
+
+
+
+
+
+
+
+				<br>
+				<hr class="hrstyle">
+				<br>
+
+
+
+
+
+
+
+				<div style="margin: 2em;">
+					<table style="width: 100%; height: auto;">
+						<tr>
+							<td style="width: 20%; text-align: center; padding-top: 1%; vertical-align: top; ">
+								
+								<h1>Up To Date</h1>
+								<div style="border:none; width: 90%; height: 10em; background-repeat: no-repeat; background-position: center; background-size: 80%; background-image: url(https://nontonhub.com/watch/img/24-hours-delivery.png)">
+
+								</div>
+
+							</td>
+							<td style="width: 80%; text-align: center; padding: 1em; vertical-align: top;">
+
+								<h2>24 jam non-stop kami tambahkan film-film baru setiap harinya</h2>
+								<span style="font-size: 90%;">Dengan jutaan film yang kami miliki, anda dapat menonton semua dengan gratis, jangan sampai ketinggal film favorit anda !</span>
+								<br>
+								<br>
+								<table style="width: 100%; height: auto; border-collapse: separate; border-spacing: 10px;">
+									<tr id="DIV_category_button_listing_1">
+										<td onclick="get_new_news_on_category('newest','Aksi');" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 6em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(https://nontonhub.com/watch/../app/img/poster_action.jpg); ">
+											<button class="btn_2" style="font-size: 100%; cursor: pointer;">Aksi</button>
+										</td>
+										<td onclick="get_new_news_on_category('newest','Perang');" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 6em;border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(https://nontonhub.com/watch/../app/img/poster_war.jpg);">
+											<button class="btn_2" style="font-size: 100%; cursor: pointer;">Perang</button>
+										</td>
+										<td onclick="get_new_news_on_category('newest','Drama');" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 6em;border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(https://nontonhub.com/watch/../app/img/poster_drama.jpg);">
+											<button class="btn_2" style="font-size: 100%; cursor: pointer;">Drama</button>
+										</td>
+										<td onclick="get_new_news_on_category('newest','Horor');" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 6em;border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(https://nontonhub.com/watch/../app/img/poster_horror.jpg);">
+											<button class="btn_2" style="font-size: 100%; cursor: pointer;">Horor</button>
+										</td>
+										<td onclick="get_new_news_on_category('newest','Barat');" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 6em;border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(https://nontonhub.com/watch/../app/img/poster_western.jpg);">
+											<button class="btn_2" style="font-size: 100%; cursor: pointer;">Barat</button>
+										</td>
+										<td onclick="get_new_news_on_category('newest','Kejahatan');" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 6em;border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(https://nontonhub.com/watch/../app/img/poster_crime.jpg);">
+											<button class="btn_2" style="font-size: 100%; cursor: pointer;">Kejahatan</button>
+										</td>
+									</tr>
+								</table>
+
+							</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					<h2>Film terbaru di kategori "<b id="newest_search_lbl">Aksi</b>"</h2>
+					<div class="grid-container3" id="DIV_newest_movies_on_category">
+
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+				        <div class="grid-item3" style="background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); width:90%; height:25vh; background-color:#ccc; border-radius:10px; padding-left: 1em; padding-right: 1em;">
+
+				        
+				        </div>
+						
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+				<br>
+				<hr class="hrstyle">
+				<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<table style="width: 100%; height: 70vh;">
+					<tr>
+						<td style="width: 20%; text-align: center; padding-top: 1%; vertical-align: top; ">
+							
+							<h1>Indeks Film</h1>
+							<div style="border:none; width: 100%; height: 15em; background-repeat: no-repeat; background-position: center; background-size: 80%; background-image: url(https://nontonhub.com/watch/img/searching_interface_illustration_icons8_2x.png)">
+
+							</div>
+
+						</td>
+						<td style="width: 70%; text-align: center; padding: 1em; vertical-align: top;">
+
+							<h2>Cari dengan mudah berdasarkan kategori dan lain-lain</h2>
+							<div class="grid-container2" id="DIV_listing_for_indexing">
+
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								<div class="grid-item2" onclick="" style="cursor: pointer; width: auto; text-align: center; vertical-align: bottom; height: 9em; border-radius: 7px; background-repeat: background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url(); ">
+									<button class="btn_2" style="font-size: 100%; cursor: pointer;"></button>
+								</div>
+								
+							</div>
+
+						</td>
+					</tr>
+				</table>
+				<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+<!-- 
+
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+	<div id="circularMenu" class="circular-menu">
+
+	  <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+	    <i class="fa fa-plus"></i>
+	  </a>
+
+	  <menu class="items-wrapper">
+	    <a href="#" class="menu-item fa fa-facebook"></a>
+	    <a href="#" class="menu-item fa fa-twitter"></a>
+	    <a href="#" class="menu-item fa fa-google-plus"></a>
+	    <a href="#" class="menu-item fa fa-linkedin"></a>
+	  </menu>
+
+	</div> -->
+
+
+
+
+
+
+
+
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+<div style="margin: 0; padding: 0; width: 100%; height: auto;background-color: #ececec; text-align: center;">
+<table style="width: 100%; height: auto; margin: 0; padding: 0; background-color: #ececec;">
+	<tr>
+		<td style="width: 15%; text-align: center; padding: 2%; vertical-align: top; ">
+			
+			<img src="https://nontonhub.com/watch/img/NEWLOGOBIG.png" style="width: 60% ; height: auto;">
+			<br>
+			<h1>Nonton<b style="color: #ffb200">Hub</b>.com <br>XXI Cinema</h1>
+
+		</td>
+		<td style="width: 35%; text-align: left; padding: 2%; vertical-align: top; ">
+
+			<h5>Rekomendasi</h5>
+
+			<div class="grid-container6" id="DIV_category_listing" style="margin: 0; padding: 0; position: relative; top: -1.5em; left: -1.5em;">
+
+
+			</div>
+				
+		</td>
+		<td style="width: 25%; text-align: left; padding: 2%; vertical-align: top; " id="DIV_headlines_listing">
+
+			<h5>Makin Seru Disini</h5>
+				
+		</td>
+		<td style="width: 25%; text-align: left; padding: 1%; vertical-align: top; ">
+
+			<h2>Unduh NontonHubXXI Di Smartphone Anda Sekarang!</h2>
+			<span style="font-size: 90%;">Dapatkan fitur lebih dengan mudah, nyaman, serta anda akan mendapatkan informasi terbaru dari semua film terbaru, hanya dengan menggunakan aplikasi NontonHubXXI dari Playstore, kamu juga dapat berdiskusi dengan mereka bersama-sama. Download sekarang di Playstore !</span>
+			<br>
+			<br>
+			<br>
+			<button onclick="window.open('https://play.google.com/store/apps/details?id=com.nontonhub.app');" style="cursor: pointer; border:none; width: 12em; height: 4em; background-repeat: no-repeat; background-position: center; background-size: 100%; background-image: url(https://nontonhub.com/watch/img/en_badge_web_generic.png); text-decoration: none; outline: none;">
+			</button>
+
+		</td>
+	</tr>
+</table>
+<br>
+<br>
+© NontonHub.com XXI. All Rights Reserved.
+<br>
+<br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
